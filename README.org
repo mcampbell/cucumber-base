@@ -12,5 +12,5 @@ You are expected to map your current dir to some place in the
 container, then use that place as your workdir.
 
 #+BEGIN_SRC shell
-docker run -it -v $(pwd):/usr/src/myapp -w /usr/src/myapp <cucumber args go here>
+docker run -it -v $(pwd):/usr/src/myapp -w /usr/src/myapp <name of container> [cucumber args go here]
 #+END_SRC
