@@ -1,0 +1,16 @@
+#+OPTIONS: toc:nil
+
+* ~cucumber-base~
+A simple container with ruby and cucumber, and whatever else I might
+need to make cucumber/ruby tests.
+
+~ENTRYPOINT~ is simply ~cucumber~, with no ~CMD~'s so you can put
+whatever args on the end you feel like using, including ~--init~.
+
+** Running
+You are expected to map your current dir to some place in the
+container, then use that place as your workdir.
+
+#+BEGIN_SRC shell
+docker run -it -v $(pwd):/usr/src/myapp -w /usr/src/myapp <cucumber args go here>
+#+END_SRC

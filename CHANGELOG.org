@@ -1,0 +1,6 @@
+#+OPTIONS: toc:nil
+
+* CHANGELOG
+
+** v1.0.0
+- Initial add. Basically just ruby with the ~cucumber~ gem installed.
