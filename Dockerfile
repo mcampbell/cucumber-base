@@ -1,6 +1,10 @@
 FROM ruby
 MAINTAINER Michael Campbell <michael.campbell@gmail.com>
 
-RUN gem install cucumber rspec-expectations excon
+RUN gem install bundler
+COPY ./Gemfile  Gemfile
+COPY ./Gemfile.lock  Gemfile.lock
 
-ENTRYPOINT cucumber
+RUN bundle install
+
+ENTRYPOINT /usr/local/bundle/bin/cucumber
